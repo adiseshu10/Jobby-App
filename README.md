@@ -18,23 +18,6 @@ The key components and functionalities of this project include:
 **Technologies used**: React JS, JS, CSS, Routing, REST API Calls, Local Storage, Cookies, JWT Token, Authorization, Authentication
 
 In summary, the Jobby App is a comprehensive job-search platform that leverages React's capabilities for creating a dynamic and secure user experience. It offers features like user authentication, job filtering, and seamless navigation while providing essential job details to help users find their ideal employment opportunities.
-### Videos :
-
-<div style="text-align: center;">
-  <video style="max-width:80%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/jobby-app-success-output-v0.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
-
-**Failure View** <br/>
-
-<div style="text-align: center;">
-  <video style="max-width:80%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/jobby-app-failure-output-v1.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
 <!--  
 ### Design Files
 
