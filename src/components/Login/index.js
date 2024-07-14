@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 
 import {Redirect} from 'react-router-dom'
 
@@ -15,7 +15,7 @@ class Login extends Component {
   }
 
   onSuccessLogin = jwtToken => {
-    Cookies.get('jwt_token', jwtToken, {expires: 30})
+    Cookies.set('jwt_token', jwtToken, {expires: 30})
     const {history} = this.props
     history.replace('/')
   }
@@ -26,7 +26,7 @@ class Login extends Component {
 
   onSubmitForm = async event => {
     event.preventDefault()
-    let {username, password} = this.state
+    const {username, password} = this.state
     const userDetails = {username, password}
     const LoginApiUrl = 'https://apis.ccbp.in/login'
     const options = {
@@ -35,6 +35,7 @@ class Login extends Component {
     }
     const response = await fetch(LoginApiUrl, options)
     const data = await response.json()
+    console.log(data)
 
     if (response.ok === true) {
       this.onSuccessLogin(data.jwt_token)
@@ -86,6 +87,11 @@ class Login extends Component {
   }
 
   render() {
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      console.log(jwtToken)
+      return <Redirect to="/" />
+    }
     const {errorMsg, showErrorMsg} = this.state
     return (
       <div className="login-container">
